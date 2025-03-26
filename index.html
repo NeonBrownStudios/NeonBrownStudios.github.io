@@ -3,30 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devlog</title>
+    <title>Neon Brown Studios</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
         }
         header {
-            background-color: #333;
+            background-color: #000;
             color: white;
             padding: 1em 0;
             text-align: center;
         }
-        .devlog {
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 0.5em 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 1em;
+            text-decoration: none;
+        }
+        .content {
             padding: 2em;
         }
+        .devlog, .contact, .about {
+            display: none;
+        }
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
+    <script>
+        function showSection(section) {
+            document.querySelector('.home').style.display = 'none';
+            document.querySelector('.devlog').style.display = 'none';
+            document.querySelector('.contact').style.display = 'none';
+            document.querySelector('.about').style.display = 'none';
+            document.querySelector('.' + section).style.display = 'block';
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Devlog</h1>
+        <h1>Neon Brown Studios</h1>
     </header>
-    <div class="devlog">
-        Welcome to the Neon Brown Studios Devlog
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('devlog')">Devlog</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+        <a href="#" onclick="showSection('about')">About Us</a>
+    </nav>
+    <div class="content">
+        <div class="home">
+            <h2>Welcome to Neon Brown Studios</h2>
+            <p>We are a horror indie game company dedicated to creating spine-chilling experiences.</p>
+        </div>
+        <div class="devlog">
+            <h2>Devlog</h2>
+            <p>Welcome to the Neon Brown Studios Devlog. Stay tuned for updates on our latest projects.</p>
+        </div>
+        <div class="contact">
+            <h2>Contact</h2>
+            <p>If you have any questions or inquiries, please reach out to us at <a href="mailto:contact@neonbrownstudios.com">contact@neonbrownstudios.com</a>.</p>
+        </div>
+        <div class="about">
+            <h2>About Us</h2>
+            <p>Neon Brown Studios is a passionate team of developers focused on creating immersive horror games that will leave you on the edge of your seat.</p>
+        </div>
     </div>
+    <footer>
+        &copy; 2025 Neon Brown Studios. All rights reserved.
+    </footer>
 </body>
 </html>

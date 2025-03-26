@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Neon Brown Studios - Home of Subject 19 and other thrilling games.">
+    <title>Neon Brown Studios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: white;
+        }
+        header {
+            background-color: #c3732a;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #fff;
+        }
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2em;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 2em;
+            color: #c3732a;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .game-preview {
+            margin: 20px 0;
+            border: 2px solid #c3732a;
+            padding: 20px;
+            background-color: #333;
+        }
+        .game-preview img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #c3732a;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #a65d25;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Neon Brown Studios</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#games">Games</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
+    <section id="home">
+        <h2>Welcome to Neon Brown Studios</h2>
+        <p>Home of the thrilling survival horror game <strong>Subject 19</strong></p>
+        <div class="game-preview">
+            <img src="subject19-preview.jpg" alt="Subject 19 Preview">
+            <p><strong>Subject 19</strong> is an intense psychological horror experience where you unravel secrets, fight hallucinations, and escape an ever-shifting nightmare.</p>
+        </div>
+    </section>
+
+    <section id="games">
+        <h2>Our Games</h2>
+        <div class="game-preview">
+            <img src="game1.jpg" alt="Game 1">
+            <p><strong>Subject 19</strong>: Uncover the horrors inside the government’s experiment gone wrong.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Neon Brown Studios is an independent game development company focused on creating narrative-driven experiences. Our first title, <strong>Subject 19</strong>, explores the intersection of psychological horror and the mysteries of government experimentation.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Neon Brown Studios. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

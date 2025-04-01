@@ -1,95 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Neon Brown Studios</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        header {
-            background-color: #000;
-            color: white;
-            padding: 1em 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 0.5em 0;
-        }
-        nav a {
-            color: white;
-            margin: 0 1em;
-            text-decoration: none;
-        }
-        .content {
-            padding: 2em;
-        }
-        .devlog, .contact, .about {
-            display: none;
-        }
-        footer {
-            background-color: #000;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
-    <script>
-        function showSection(section) {
-            document.querySelector('.home').style.display = 'none';
-            document.querySelector('.devlog').style.display = 'none';
-            document.querySelector('.contact').style.display = 'none';
-            document.querySelector('.about').style.display = 'none';
-            document.querySelector('.' + section).style.display = 'block';
-        }
-    </script>
-</head>
-<body>
-    <header>
-        <h1>Neon Brown Studios</h1>
-    </header>
-    <nav>
-        <a href="#" onclick="showSection('home')">Home</a>
-        <a href="#" onclick="showSection('devlog')">Devlog</a>
-        <a href="#" onclick="showSection('contact')">Contact</a>
-        <a href="#" onclick="showSection('about')">About Us</a>
-    </nav>
-    <div class="content">
-        <div class="home">
-            <h2>Subject 19</h2>
-            <p>Explore the facility and find the truth before you become like the others.</p>
-            <p>In this psycalogical horror game you are a subject of a failed experement trying to escape from the abandoned facility they have spent so much quality time in...</p>
-        </div>
-        <div class="devlog">
-            <h2>Devlog</h2>
-            <p>Welcome to the Neon Brown Studios Devlog. Stay tuned for updates on our latest projects.</p>
-            <p>26/03/2025 - Testing the devlog on the new website (still in beta) I will finish it over the next few days. - D</p>
-            <p>01/04/25 - Over the past few days I have a simple movment rig on godot fit with sprinting, a jump buffer mechanic and crouching. - D</p>
-        </div>
-        <div class="contact">
-            <h2>Contact</h2>
-            <p>If you have any questions or inquiries, please reach out to us at <a href="mailto:neonbrownstudios@gmail.com">neonbrownstudios@gmail.com</a>.</p>
-        </div>
-        <div class="about">
-            <h2>About Us</h2>
-            <p>We are the the best indie game development team within a metre of us!</p>
-            <p>we are:</p>
-            <p>Devendr - The main game designer, artist, and the main decision maker, I basically do everything here.</p>
-        </div>
-    </div>
-    <footer>
-        &copy; 2025 Neon Brown Studios. All rights reserved.
-    </footer>
-</body>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <meta name="description" content="Independent game development studio creating immersive psychological horror experiences">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

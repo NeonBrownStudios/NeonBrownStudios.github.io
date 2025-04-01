@@ -41,7 +41,7 @@ function App() {
           <h1 className="text-4xl font-bold text-center animate-gradient bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-transparent bg-clip-text">
             Neon Brown Studios
           </h1>
-          
+
           {/* Navigation */}
           <nav className="mt-4">
             <div className="flex justify-center space-x-8">
@@ -90,13 +90,13 @@ function App() {
                 </div>
               </div>
             </div>
-            
+
             {/* About Studio */}
             <div className="bg-black/30 p-8 rounded-xl backdrop-blur-sm border border-white/5 shadow-lg shadow-purple-500/5">
               <p className="text-lg text-gray-300 leading-relaxed">
-                We are an independent game development studio focused on crafting unique horror experiences 
-                that blend psychological elements with compelling narratives. Our games aim to challenge 
-                players' expectations and create memorable experiences that stay with them long after they've 
+                We are an independent game development studio focused on crafting unique horror experiences
+                that blend psychological elements with compelling narratives. Our games aim to challenge
+                players' expectations and create memorable experiences that stay with them long after they've
                 finished playing.
               </p>
             </div>
@@ -105,7 +105,7 @@ function App() {
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-2xl font-bold">Latest Project</h3>
-                <button 
+                <button
                   onClick={() => setActiveSection('projects')}
                   className="group flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors"
                 >
@@ -135,7 +135,7 @@ function App() {
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-2xl font-bold">Latest Updates</h3>
-                <button 
+                <button
                   onClick={() => setActiveSection('devlog')}
                   className="group flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors"
                 >
@@ -151,7 +151,7 @@ function App() {
 
             {/* Quick Links */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <button 
+              <button
                 onClick={() => setActiveSection('about')}
                 className="bg-black/30 p-8 rounded-xl border border-white/5 hover:bg-black/40 transition-all duration-300 group hover:shadow-lg hover:shadow-purple-500/5"
               >
@@ -162,8 +162,8 @@ function App() {
                 <h4 className="text-xl font-bold mb-2">About Us</h4>
                 <p className="text-gray-300">Meet the team behind Neon Brown Studios</p>
               </button>
-              
-              <button 
+
+              <button
                 onClick={() => setActiveSection('contact')}
                 className="bg-black/30 p-8 rounded-xl border border-white/5 hover:bg-black/40 transition-all duration-300 group hover:shadow-lg hover:shadow-purple-500/5"
               >
@@ -182,7 +182,7 @@ function App() {
         {activeSection === 'projects' && (
           <div className="space-y-8 animate-fade-in">
             <h2 className="text-3xl font-bold mb-8">Our Projects</h2>
-            
+
             <div className="bg-black/30 rounded-xl overflow-hidden border border-white/5 shadow-lg shadow-purple-500/5">
               <div className="relative">
                 <img
@@ -192,7 +192,7 @@ function App() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
               </div>
-              
+
               <div className="p-8 space-y-6">
                 <div>
                   <h3 className="text-4xl font-bold mb-4 animate-gradient bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">
@@ -206,9 +206,9 @@ function App() {
                 <div className="space-y-4">
                   <h4 className="text-xl font-semibold text-purple-400">About the Game</h4>
                   <p className="text-gray-300 leading-relaxed">
-                    In this psychological horror game, you are Subject 19, the lone survivor of a failed 
-                    experiment. Navigate through an abandoned facility where you once spent countless hours 
-                    as a test subject. Uncover the dark truth behind the experiments while avoiding the 
+                    In this psychological horror game, you are Subject 19, the lone survivor of a failed
+                    experiment. Navigate through an abandoned facility where you once spent countless hours
+                    as a test subject. Uncover the dark truth behind the experiments while avoiding the
                     fate that befell the others.
                   </p>
                 </div>
@@ -252,7 +252,7 @@ function App() {
         {activeSection === 'devlog' && (
           <div className="space-y-6 animate-fade-in">
             <h2 className="text-3xl font-bold mb-8">Development Log</h2>
-            
+
             <div className="space-y-6">
               {[
                 {
@@ -262,7 +262,10 @@ function App() {
                 {
                   date: '26/03/25',
                   content: 'Testing the devlog on the new website (still in beta) I will finish it over the next few days. - D'
-                }
+                },
+                {date: '', content: ''},
+                {date: '', content: ''},
+                {date: '', content: ''},
               ].map((entry, index) => (
                 <div key={index} className="bg-black/30 p-6 rounded-xl border border-white/5 shadow-lg shadow-purple-500/5 hover:shadow-purple-500/10 transition-all duration-300">
                   <div className="text-purple-400 font-mono mb-2">{entry.date}</div>
@@ -299,7 +302,7 @@ function App() {
               <p className="text-xl text-purple-400">
                 We are the best indie game development team within a metre of us!
               </p>
-              
+
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">Meet the Team:</h3>
                 <div className="bg-black/30 p-6 rounded-lg border border-white/5 hover:shadow-lg hover:shadow-purple-500/5 transition-all duration-300">
@@ -333,7 +336,7 @@ function App() {
                 </a>
               ))}
             </div>
-            
+
             {/* Copyright */}
             <div className="text-sm text-gray-400">
               © 2025 Neon Brown Studios. All rights reserved.

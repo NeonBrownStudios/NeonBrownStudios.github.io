@@ -1,16 +1,198 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Neon Brown Studios</title>
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <meta name="description" content="Independent game development studio creating immersive psychological horror experiences">
-    <script type="module" crossorigin src="/assets/index-CxKRSBPT.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-saFnjUoQ.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neon Brown Studios</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #1a1a1a, #333);
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 2px solid #444;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #00ffcc;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      color: #ccc;
+    }
+    nav {
+      background: #111;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid #222;
+    }
+    nav a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffffff;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+    }
+    section h2 {
+      color: #00ffcc;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+    .btn {
+      background: #00ffcc;
+      color: #000;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 0.5rem;
+    }
+    .btn:hover {
+      background: #00ccb3;
+    }
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Devlog styling */
+    #devlog .dev-entry {
+      background: #1a1a1a;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid #00ffcc;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    #devlog h3 {
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+      font-size: 1.2rem;
+    }
+    .more-text {
+      display: none;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Neon Brown Studios</h1>
+    <p>Where Stories Come to Life</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#devlog">Devlog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="fade-in">
+    <h2>About Us</h2>
+    <p>Neon Brown Studios is an independent game studio crafting immersive and psychologically-driven experiences. We love combining compelling narratives with eerie, stylized atmospheres.</p>
+  </section>
+
+  <section id="projects" class="fade-in">
+    <h2>Our Projects</h2>
+    <p><strong>Subject 19</strong> – A psychological horror experience set in an abandoned research facility beneath a mental hospital. Explore a mind-bending world of gas leaks, hallucinations, and buried secrets.</p>
+    <button class="btn" onclick="alert('Subject 19 coming soon!')">Learn More</button>
+  </section>
+
+  <section id="devlog" class="fade-in">
+    <h2>Devlog</h2>
+
+    <div class="dev-entry">
+      <h3>📅 April 7, 2025 — Hallucination System Tweaks</h3>
+      <p>
+        Added randomized spider hallucinations that now crawl across the walls mid-game. They only appear when the player’s stress levels spike.
+        <span class="more-text">I’m also experimenting with subtle audio cues during chase scenes—just whispers and soft static. It's eerie as hell. Next up: testing a memory-bleed effect that distorts past rooms.</span>
+      </p>
+      <button class="btn toggle-btn">Read More</button>
+    </div>
+
+    <div class="dev-entry">
+      <h3>📅 April 3, 2025 — Power Restoration Puzzle</h3>
+      <p>
+        Just finished designing the first power-based puzzle. Players need to reroute wires in a dark basement with only one flashlight battery.
+        <span class="more-text">I also made a cool glitch effect when the power turns on, to make the hospital flicker briefly into how it looked in 1885. Hidden lore will be visible only during these flashes.</span>
+      </p>
+      <button class="btn toggle-btn">Read More</button>
+    </div>
+
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <p>Have questions or want to collaborate? Reach out to us at:</p>
+    <p><a href="mailto:contact@neonbrownstudios.com" style="color: #00ffcc;">contact@neonbrownstudios.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Neon Brown Studios. All rights reserved.
+  </footer>
+
+  <script>
+    // Fade-in on scroll
+    const fadeInElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationDelay = '0.2s';
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    fadeInElements.forEach(el => observer.observe(el));
+
+    // Devlog "Read More" toggle
+    document.querySelectorAll('.toggle-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const moreText = btn.previousElementSibling.querySelector('.more-text');
+        const isVisible = moreText.style.display === 'inline';
+
+        moreText.style.display = isVisible ? 'none' : 'inline';
+        btn.textContent = isVisible ? 'Read More' : 'Show Less';
+      });
+    });
+  </script>
+
+</body>
 </html>

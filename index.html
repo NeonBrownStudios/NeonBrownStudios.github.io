@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Neon Brown Studios - Your go-to indie game studio for immersive horror experiences.">
   <title>Neon Brown Studios</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
   <style>
     :root {
       --accent: #00ffcc;
@@ -12,6 +14,7 @@
       --glass: rgba(255, 255, 255, 0.05);
     }
 
+    /* Consolidate CSS rules and use variables */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -186,7 +189,7 @@
 
   <section id="about">
     <h2>About Us</h2>
-    <p>We’re an indie game studio crafting immersive, atmospheric horror experiences with heavy emphasis on story and exploration. Our debut title, <strong>Subject 19</strong>, explores isolation and psychological horror in a unique narrative setting.</p>
+    <p>We’re an indie game studio crafting immersive, atmospheric horror experiences with heavy emphasis on story and exploration. Our debut title, <strong>Subject 19</strong>, explores isolation and psychological horror.</p>
   </section>
 
   <section id="projects">
@@ -225,17 +228,7 @@
     &copy; 2025 Neon Brown Studios. All rights reserved.
   </footer>
 
-  <script>
-    // Toggle Read More
-    document.querySelectorAll('.toggle-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const more = btn.previousElementSibling.querySelector('.more-text');
-        const isVisible = more.style.display === 'inline';
-        more.style.display = isVisible ? 'none' : 'inline';
-        btn.textContent = isVisible ? 'Read More' : 'Show Less';
-      });
-    });
-  </script>
+  <script defer src="scripts/main.js"></script>
 
 </body>
 </html>

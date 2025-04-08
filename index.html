@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Neon Brown Studios - Immersive horror experiences.">
+  <meta name="keywords" content="Neon Brown Studios, horror games, indie game studio, immersive experiences">
+  <meta name="author" content="Neon Brown Studios">
   <title>Neon Brown Studios</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <style>
     :root {
       --accent: #00ffcc;
@@ -63,172 +68,5 @@
     nav a {
       color: var(--accent);
       text-decoration: none;
-      font-weight: 600;
-      position: relative;
-      transition: color 0.3s ease;
-    }
-
-    nav a::after {
-      content: '';
-      display: block;
-      height: 2px;
-      width: 0%;
-      background: var(--accent);
-      transition: 0.3s ease;
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 4rem auto;
-      padding: 2rem;
-      border-radius: 12px;
-      background: var(--glass);
-      backdrop-filter: blur(6px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease;
-    }
-
-    section:hover {
-      transform: scale(1.01);
-    }
-
-    section h2 {
-      color: var(--accent);
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .project, .dev-entry {
-      background: rgba(255, 255, 255, 0.03);
-      border-left: 4px solid var(--accent);
-      padding: 1.2rem;
-      border-radius: 10px;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: background 0.3s;
-    }
-
-    .project:hover, .dev-entry:hover {
-      background: rgba(255, 255, 255, 0.05);
-    }
-
-    .project h3, .dev-entry h3 {
-      margin-bottom: 0.5rem;
-      color: #fff;
-    }
-
-    .btn {
-      background: var(--accent);
-      color: #000;
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 30px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      margin-top: 0.8rem;
-    }
-
-    .btn:hover {
-      background: #00ddaa;
-    }
-
-    .more-text {
-      display: none;
-      color: #bbb;
-    }
-
-    footer {
-      text-align: center;
-      color: #888;
-      padding: 3rem 1rem 2rem;
-      font-size: 0.9rem;
-    }
-
-    a.mail-link {
-      color: var(--accent);
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      nav {
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-
-      section {
-        margin: 2rem 1rem;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Neon Brown Studios</h1>
-    <p>Immersive horror experiences.</p>
-  </header>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#devlog">Devlog</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We’re an indie game studio crafting immersive, atmospheric horror experiences with heavy emphasis on story and exploration. Our debut title, <strong>Subject 19</strong>, explores isolation and psychological horror.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Subject 19</h3>
-      <p>Explore and escape the lab that you spent so much quality time in.</p>
-      <button class="btn" onclick="window.location.href='https://neon-brown-studios.itch.io/'">Learn More</button>
-    </div>
-  </section>
-
-  <section id="devlog">
-    <h2>Devlog</h2>
-    <div class="dev-entry">
-      <h3>07/04/2025</h3>
-      <p>
-        Wrote enemy AI and soon I will put it into godot over the following days.
-        <span class="more-text"> I used an urgency system and although I have not yet made the actual monster yet, I just decided to script AI (or some of it at least).</span>
-      </p>
-      <button class="btn toggle-btn">Read More</button>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Have feedback, ideas, or just want to say hello?</p>
-    <p><a href="mailto:neon.brown.studios@gmail.com" class="mail-link">neon.brown.studios@gmail.com</a></p>
-    <p>
-      <a href="https://bsky.app/profile/neonbrownstudios.bsky.social" target="_blank">Bluesky</a> |
-      <a href="https://neon-brown-studios.itch.io/" target="_blank">Itch.io</a> |
-      <a href="https://x.com/neonbrownstudios" target="_blank">X</a>
-    </p>
-  </section>
-
-  <footer>
-    &copy; 2025 Neon Brown Studios. All rights reserved.
-  </footer>
-
-  <script defer src="scripts/main.js"></script>
-
-</body>
-</html>
+      font-weight: *
+

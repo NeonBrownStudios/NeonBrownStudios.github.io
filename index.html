@@ -9,6 +9,8 @@
   <meta name="author" content="Neon Brown Studios">
   <title>Neon Brown Studios</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,13 +19,6 @@
       --accent: #00ffcc;
       --bg: #0a0a0a;
       --glass: rgba(255, 255, 255, 0.05);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
     }
 
     body {
@@ -89,11 +84,25 @@
       margin-bottom: 1rem;
       color: #aaa;
     }
+
+    /* Add some animations */
+    .fade-in {
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <header>
+  <header class="fade-in">
     <h1>Neon Brown Studios</h1>
     <p>Immersive horror experiences</p>
   </header>
@@ -106,35 +115,39 @@
     <a href="#social">Social Media</a>
   </nav>
 
-  <section id="home">
+  <section id="home" class="fade-in">
     <h2>Home</h2>
     <p>Welcome to Neon Brown Studios, where we create immersive horror experiences.</p>
   </section>
 
-  <section id="about">
+  <section id="about" class="fade-in">
     <h2>About</h2>
     <p>Learn more about our studio and our mission to deliver the best horror games.</p>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="fade-in">
     <h2>Projects</h2>
     <p>Explore our latest projects and see what we're working on.</p>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="fade-in">
     <h2>Contact</h2>
     <p>Get in touch with us for any inquiries or collaborations.</p>
   </section>
-  
-  <section id="devog">
+
+  <section id="devog" class="fade-in">
     <h2>Devog</h2>
     <p>Read our development blog and stay updated with our progress.</p>
   </section>
 
-  <section id="social">
+  <section id="social" class="fade-in">
     <h2>Social Media</h2>
     <p>Follow us on our social media platforms to stay connected.</p>
   </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

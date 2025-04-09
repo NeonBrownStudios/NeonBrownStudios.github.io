@@ -1,38 +1,221 @@
-<nav>
-  <a href="home.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="projects.html">Projects</a>
-  <a href="contact.html">Contact</a>
-  <a href="devog.html">Devog</a>
-  <a href="social.html">Social Media</a>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neon Brown Studios</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e0e0e;
+      --accent: #00ffd5;
+      --white: #f1f1f1;
+      --glass: rgba(255, 255, 255, 0.05);
+    }
 
-<section id="home" class="fade-in">
-  <h2>Home</h2>
-  <p>Welcome to Neon Brown Studios, where we create immersive horror experiences.</p>
-</section>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-<section id="about" class="fade-in">
-  <h2>About</h2>
-  <p>Learn more about our studio and our mission to deliver the best horror games.</p>
-</section>
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.6;
+    }
 
-<section id="projects" class="fade-in">
-  <h2>Projects</h2>
-  <p>Explore our latest projects and see what we're working on.</p>
-</section>
+    header {
+      text-align: center;
+      padding: 6rem 2rem 3rem;
+    }
 
-<section id="contact" class="fade-in">
-  <h2>Contact</h2>
-  <p>Get in touch with us for any inquiries or collaborations.</p>
-</section>
+    header h1 {
+      font-size: 3.5rem;
+      color: var(--accent);
+    }
 
-<section id="devog" class="fade-in">
-  <h2>Devog</h2>
-  <p>Read our development blog and stay updated with our progress.</p>
-</section>
+    header p {
+      color: #aaa;
+      font-size: 1.3rem;
+    }
 
-<section id="social" class="fade-in">
-  <h2>Social Media</h2>
-  <p>Follow us on our social media platforms to stay connected.</p>
-</section>
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #222;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: var(--glass);
+      border-radius: 16px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    section:hover {
+      transform: scale(1.01);
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .content-block {
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      background-color: var(--accent);
+      color: #000;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #00d1ad;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .socials a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-decoration: none;
+      color: var(--accent);
+      font-size: 1.2rem;
+      transition: background 0.3s ease;
+    }
+
+    .socials a:hover {
+      background: var(--accent);
+      color: #000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      section {
+        margin: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Neon Brown Studios</h1>
+    <p>Indie horror studio exploring fear, memory, and identity.</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#devlog">Devlog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="content-block">
+      <p>We are a passionate, single-dev studio working on deeply narrative horror experiences. Our work focuses on blending surreal environments, psychological storytelling, and limited but impactful gameplay.</p>
+    </div>
+    <a href="https://example.com/about" target="_blank" class="btn">Learn More</a>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="content-block">
+      <p><strong>Subject 19</strong> — A 2D survival horror game set in a twisting, hallucination-ridden facility. The game blends stealth, exploration, and memory distortion into a tense psychological journey.</p>
+    </div>
+    <a href="https://example.com/subject19" target="_blank" class="btn">View Project</a>
+  </section>
+
+  <section id="devlog">
+    <h2>Devlog</h2>
+    <div class="content-block">
+      <p><strong>April 7, 2025:</strong> Finalizing hallucination system, adding VHS glitch effects, and dynamic environmental triggers during chase sequences.</p>
+      <p><strong>March 30, 2025:</strong> Implemented power reroute puzzle system with visual feedback and secondary clues hidden in flickering lights.</p>
+    </div>
+    <a href="https://example.com/devlog" target="_blank" class="btn">Read Full Devlog</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact & Links</h2>
+    <p>Got a question or just want to connect? Reach out to us via social media or email!</p>
+    <div class="socials">
+      <a href="https://twitter.com/yourstudio" target="_blank" title="Twitter">X</a>
+      <a href="https://github.com/yourstudio" target="_blank" title="GitHub">GH</a>
+      <a href="mailto:contact@neonbrownstudios.com" title="Email">✉️</a>
+      <a href="https://neonbrownstudios.itch.io" target="_blank" title="Itch.io">🎮</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Neon Brown Studios. Crafted with love, fear, and caffeine.
+  </footer>
+
+</body>
+</html>

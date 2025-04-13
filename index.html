@@ -4,13 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Neon Brown Studios</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0e0e0e;
-      --accent: #00ffd5;
-      --white: #f1f1f1;
-      --glass: rgba(255, 255, 255, 0.05);
+      --bg: #2d1b00;
+      --accent: #ff6b35;
+      --secondary: #f7c59f;
+      --tertiary: #efefd0;
+      --white: #fff3e4;
+      --gradient: linear-gradient(135deg, #ff6b35 0%, #ff4f00 100%);
     }
 
     * {
@@ -21,189 +23,533 @@
     }
 
     body {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       background: var(--bg);
       color: var(--white);
       line-height: 1.6;
+      background-image: 
+        repeating-linear-gradient(
+          45deg,
+          rgba(255, 107, 53, 0.1) 0px,
+          rgba(255, 107, 53, 0.1) 2px,
+          transparent 2px,
+          transparent 10px
+        ),
+        repeating-linear-gradient(
+          -45deg,
+          rgba(247, 197, 159, 0.1) 0px,
+          rgba(247, 197, 159, 0.1) 2px,
+          transparent 2px,
+          transparent 10px
+        );
     }
 
     header {
       text-align: center;
-      padding: 6rem 2rem 3rem;
+      padding: 8rem 2rem 5rem;
+      position: relative;
+      overflow: hidden;
+      background: rgba(45, 27, 0, 0.8);
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--accent),
+        var(--accent) 10px,
+        var(--secondary) 10px,
+        var(--secondary) 20px
+      );
     }
 
     header h1 {
-      font-size: 3.5rem;
+      font-family: 'Rubik Mono One', sans-serif;
+      font-size: 4.5rem;
       color: var(--accent);
+      margin-bottom: 1rem;
+      letter-spacing: -2px;
+      text-shadow: 4px 4px 0px rgba(247, 197, 159, 0.3);
+      transform: skew(-5deg);
     }
 
     header p {
-      color: #aaa;
-      font-size: 1.3rem;
+      color: var(--tertiary);
+      font-size: 1.5rem;
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
 
     nav {
-      position: sticky;
+      position: fixed;
       top: 0;
+      left: 0;
+      right: 0;
       z-index: 999;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 2rem;
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(8px);
-      padding: 1rem 2rem;
-      border-bottom: 1px solid #222;
+      gap: 3rem;
+      background: rgba(45, 27, 0, 0.9);
+      padding: 1.5rem 2rem;
+      border-bottom: 4px solid var(--accent);
     }
 
     nav a {
       color: var(--white);
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.2rem;
       position: relative;
-      padding-bottom: 4px;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background-color: var(--accent);
-      transition: width 0.3s;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: 4rem auto;
-      padding: 2rem;
-      background: var(--glass);
-      border-radius: 16px;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      padding: 5px 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border: 2px solid var(--accent);
       transition: all 0.3s ease;
     }
 
-    section:hover {
-      transform: scale(1.01);
+    nav a:hover {
+      background: var(--accent);
+      color: var(--bg);
+      transform: scale(1.1);
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 6rem auto;
+      padding: 3rem;
+      background: rgba(45, 27, 0, 0.6);
+      border: 4px solid var(--accent);
+      outline: 2px solid var(--secondary);
+      outline-offset: -12px;
+      position: relative;
+    }
+
+    section::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: repeating-linear-gradient(
+        45deg,
+        var(--accent),
+        var(--accent) 10px,
+        transparent 10px,
+        transparent 20px
+      );
+      z-index: -1;
+      opacity: 0.1;
     }
 
     section h2 {
-      font-size: 2.2rem;
+      font-family: 'Rubik Mono One', sans-serif;
+      font-size: 2.5rem;
       color: var(--accent);
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 3px 3px 0px rgba(247, 197, 159, 0.3);
+      transform: skew(-5deg);
     }
 
     .content-block {
+      margin-bottom: 2.5rem;
+      font-size: 1.2rem;
+      color: var(--tertiary);
+    }
+
+    .content-block strong {
+      color: var(--secondary);
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+    }
+
+    .project-card {
+      background: rgba(255, 107, 53, 0.1);
+      padding: 2rem;
       margin-bottom: 2rem;
+      border: 2px solid var(--accent);
+      position: relative;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--accent),
+        var(--accent) 10px,
+        transparent 10px,
+        transparent 20px
+      );
+      z-index: -1;
+      opacity: 0.1;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .team-member {
+      background: rgba(255, 107, 53, 0.1);
+      padding: 1.5rem;
+      border: 2px solid var(--accent);
+      text-align: center;
+    }
+
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid var(--accent);
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 4px;
+      height: 100%;
+      background: var(--accent);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+      width: calc(50% - 2rem);
+      padding: 1.5rem;
+      background: rgba(255, 107, 53, 0.1);
+      border: 2px solid var(--accent);
+    }
+
+    .timeline-item:nth-child(odd) {
+      margin-left: auto;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .timeline-item:nth-child(odd)::before {
+      left: -3rem;
+    }
+
+    .timeline-item:nth-child(even)::before {
+      right: -3rem;
     }
 
     .btn {
       display: inline-block;
-      padding: 0.6rem 1.4rem;
-      background-color: var(--accent);
-      color: #000;
-      border-radius: 30px;
+      padding: 0.8rem 2rem;
+      background: var(--accent);
+      color: var(--white);
+      border: 2px solid var(--secondary);
       font-weight: bold;
       text-decoration: none;
-      transition: background 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      transform: skew(-5deg);
     }
 
     .btn:hover {
-      background: #00d1ad;
+      background: var(--secondary);
+      color: var(--bg);
+      transform: skew(-5deg) scale(1.1);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border: 3px solid var(--accent);
+      aspect-ratio: 16/9;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
     }
 
     .socials {
       display: flex;
       justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
+      gap: 2rem;
+      margin-top: 2.5rem;
     }
 
     .socials a {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: rgba(255, 255, 255, 0.1);
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
+      width: 60px;
+      height: 60px;
       text-decoration: none;
       color: var(--accent);
-      font-size: 1.2rem;
-      transition: background 0.3s ease;
+      font-size: 1.6rem;
+      border: 3px solid var(--accent);
+      transition: all 0.3s ease;
+      transform: rotate(45deg);
+    }
+
+    .socials a span {
+      transform: rotate(-45deg);
     }
 
     .socials a:hover {
       background: var(--accent);
-      color: #000;
+      color: var(--bg);
+      transform: rotate(225deg);
     }
 
     footer {
       text-align: center;
-      padding: 3rem 1rem 2rem;
-      font-size: 0.9rem;
-      color: #888;
+      padding: 4rem 1rem 3rem;
+      font-size: 1rem;
+      color: var(--secondary);
+      position: relative;
+      background: rgba(45, 27, 0, 0.8);
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--accent),
+        var(--accent) 10px,
+        var(--secondary) 10px,
+        var(--secondary) 20px
+      );
     }
 
     @media (max-width: 768px) {
+      header {
+        padding: 6rem 1rem 3rem;
+      }
+
       header h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
+      }
+
+      nav {
+        padding: 1rem;
+        gap: 1rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+        padding: 4px 10px;
       }
 
       section {
-        margin: 2rem 1rem;
+        margin: 3rem 1rem;
+        padding: 2rem;
+      }
+
+      .project-card {
+        padding: 1.5rem;
+      }
+
+      .timeline::before {
+        left: 2rem;
+      }
+
+      .timeline-item {
+        width: calc(100% - 4rem);
+        margin-left: 4rem !important;
+      }
+
+      .timeline-item::before {
+        left: -3rem !important;
+      }
+
+      .socials {
+        gap: 1rem;
+      }
+
+      .socials a {
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
       }
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Neon Brown Studios</h1>
-    <p>Indie horror studio.</p>
+    <p>Crafting unforgettable horror experiences through innovative indie game development.</p>
   </header>
 
   <nav>
     <a href="#about">About</a>
+    <a href="#team">Team</a>
     <a href="#projects">Projects</a>
+    <a href="#history">History</a>
+    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
     <h2>About Us</h2>
     <div class="content-block">
-      <p>The best Indie game development company within a mile of us. We also love changing our website!</p>
+      <p>At Neon Brown Studios, we're passionate about creating atmospheric horror experiences that challenge conventions and push boundaries. Our small but dedicated team combines innovative gameplay mechanics with haunting narratives to create unforgettable gaming experiences.</p>
+      <p style="margin-top: 1rem;">Founded in the heart of the indie game development scene, we believe in crafting games that not only terrify but also tell meaningful stories. Our approach combines classic horror elements with modern game design, creating experiences that stick with players long after they've finished playing.</p>
+    </div>
+  </section>
+
+  <section id="team">
+    <h2>Our Team</h2>
+    <div class="content-block">
+      <p>Meet the creative minds behind our horrifying experiences.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=150&h=150&fit=crop" alt="John Doe">
+        <h3 style="color: var(--accent); margin: 1rem 0;">John Doe</h3>
+        <p>Creative Director</p>
+      </div>
+      <div class="team-member">
+        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop" alt="Jane Smith">
+        <h3 style="color: var(--accent); margin: 1rem 0;">Jane Smith</h3>
+        <p>Lead Developer</p>
+      </div>
+      <div class="team-member">
+        <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150&h=150&fit=crop" alt="Mike Johnson">
+        <h3 style="color: var(--accent); margin: 1rem 0;">Mike Johnson</h3>
+        <p>Art Director</p>
+      </div>
     </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <div class="content-block">
-      <p><strong>Subject 19</strong> — escape and explore the secret experementaion facility you have so many happy memories of.</p>
+    <div class="project-card">
+      <div class="content-block">
+        <p><strong>Subject 19</strong></p>
+        <p>Dive into a psychological horror experience where memories and reality blur. As Subject 19, navigate through a mysterious research facility where each corridor holds secrets of your past. Uncover the truth behind the experiments while avoiding the horrors that now roam these halls.</p>
+        <p style="margin-top: 1rem;">Features:</p>
+        <ul style="list-style: none; margin-top: 0.5rem;">
+          <li>• Dynamic sanity system that affects gameplay and environment</li>
+          <li>• Intricate puzzle-solving mechanics</li>
+          <li>• Multiple endings based on your choices</li>
+          <li>• Original soundtrack inspired by 70s horror films</li>
+        </ul>
+        <p style="margin-top: 1rem;">
+          <a href="#" class="btn">Coming Soon</a>
+        </p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="content-block">
+        <p><strong>Echoes of Yesterday</strong></p>
+        <p>A retro-inspired horror adventure set in a small town trapped in a time loop. Every day repeats, but the horrors grow stronger. Can you break the cycle before it's too late?</p>
+        <p style="margin-top: 1rem;">
+          <a href="#" class="btn">In Development</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="history">
+    <h2>Our Journey</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3 style="color: var(--accent)">2023</h3>
+        <p>Founded Neon Brown Studios with a vision to create unique horror experiences</p>
+      </div>
+      <div class="timeline-item">
+        <h3 style="color: var(--accent)">2024</h3>
+        <p>Began development on our first title, Subject 19</p>
+      </div>
+      <div class="timeline-item">
+        <h3 style="color: var(--accent)">2025</h3>
+        <p>Expanded our team and started work on Echoes of Yesterday</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=450&fit=crop" alt="Game Screenshot 1">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&h=450&fit=crop" alt="Game Screenshot 2">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&h=450&fit=crop" alt="Game Screenshot 3">
+      </div>
     </div>
   </section>
 
   <section id="contact">
-    <h2>Contact & Links</h2>
-    <p>Got a question or just want to connect? Reach out to us via social media or email!</p>
+    <h2>Connect With Us</h2>
+    <div class="content-block">
+      <p>Want to follow our journey or get in touch? Find us on social media or drop us a line! We love hearing from fellow horror enthusiasts and gamers.</p>
+      <p style="margin-top: 1rem;">Join our newsletter to stay updated on our latest developments, behind-the-scenes content, and exclusive previews of our upcoming projects.</p>
+    </div>
     <div class="socials">
-      <a href="https://x.com/neonbrownstudio" target="_blank" title="Twitter">X</a>
-      <a href="https://github.com/Devendr08" target="_blank" title="GitHub">GH</a>
-      <a href="mailto:neon.brown.studios@gmail.com" title="Email">✉️</a>
-      <a href="https://neon-brown-studios.itch.io/" target="_blank" title="Itch.io">🎮</a>
+      <a href="https://x.com/neonbrownstudio" target="_blank" title="Twitter"><span>𝕏</span></a>
+      <a href="https://github.com/Devendr08" target="_blank" title="GitHub"><span>GH</span></a>
+      <a href="mailto:neon.brown.studios@gmail.com" title="Email"><span>✉️</span></a>
+      <a href="https://neon-brown-studios.itch.io/" target="_blank" title="Itch.io"><span>🎮</span></a>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Neon Brown Studios. Crafted with love, fear, and caffeine.
+    &copy; 2025 Neon Brown Studios. Crafted with love, fear, and caffeine in the dark.
   </footer>
-
 </body>
 </html>

@@ -19,23 +19,37 @@
     }
 
     header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
       background-color: rgba(0, 0, 0, 0.75);
-      padding: 3rem 2rem;
-      text-align: center;
+      padding: 2rem;
       border-bottom: 2px solid #fff2d4;
     }
 
-    header h1 {
-      margin: 0;
-      color: #fff2d4;
-      font-size: 3rem;
-      letter-spacing: 2px;
+    .logo img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 20px #ff8c00aa;
     }
 
-    header p {
+    .title {
+      flex-grow: 1;
+    }
+
+    .title h1 {
+      margin: 0;
+      color: #fff2d4;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+
+    .title p {
+      margin: 0.3rem 0 0;
       font-size: 1.2rem;
       color: #ffd;
-      margin-top: 0.5rem;
       font-style: italic;
     }
 
@@ -97,12 +111,34 @@
       border-top: 2px solid #ffddb3;
       margin-top: auto;
     }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .logo img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .title h1 {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Neon Brown Studios</h1>
-    <p>Game Development by Devendr</p>
+    <div class="logo">
+      <img src="ChatGPT Image May 22, 2025, 07_34_23 PM.png" alt="Neon Brown Studios Logo">
+    </div>
+    <div class="title">
+      <h1>Neon Brown Studios</h1>
+      <p>Game Development by Devendr</p>
+    </div>
   </header>
 
   <main>
